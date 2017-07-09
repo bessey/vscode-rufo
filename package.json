@@ -7,26 +7,15 @@
   "engines": {
     "vscode": "^1.13.0"
   },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:extension.sayHello"
-  ],
+  "categories": ["Formatters"],
+  "keywords": ["ruby", "rufo", "formatting"],
+  "activationEvents": ["onCommand:extension.formatRuby", "onLanguage:ruby"],
   "main": "./out/src/extension",
   "contributes": {
     "commands": [
       {
         "command": "extension.formatRuby",
         "title": "Format ruby file"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "extension.formatRuby",
-        "key": "ctrl+shift+I",
-        "mac": "cmd+shift+I",
-        "when": "editorTextFocus"
       }
     ],
     "configuration": {
@@ -49,10 +38,12 @@
   },
   "devDependencies": {
     "@types/mocha": "^2.2.32",
-    "@types/node": "^6.0.40",
     "mocha": "^2.3.3",
     "tslint": "^5.5.0",
     "typescript": "^2.0.3",
     "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.9"
   }
 }
