@@ -1,6 +1,6 @@
-# rufo-vscode README
+# vscode-rufo README
 
-This is the README for your extension "rufo-vscode". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "vscode-rufo". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
