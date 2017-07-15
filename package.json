@@ -1,8 +1,8 @@
 {
   "name": "vscode-rufo",
-  "displayName": "rufo",
+  "displayName": "rufo (Ruby formatter)",
   "description": "Ruby formatter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "mbessey",
   "engines": {
     "vscode": "^1.13.0"
@@ -11,6 +11,18 @@
   "keywords": ["ruby", "rufo", "formatting"],
   "activationEvents": ["onCommand:extension.formatRuby", "onLanguage:ruby"],
   "main": "./out/src/extension",
+  "homepage": "https://github.com/bessey/vscode-rufo",
+  "bugs": {
+    "url": "https://github.com/bessey/vscode-rufo/issues"
+  },
+  "repository": {
+    "url": "https://github.com/bessey/vscode-rufo"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "galleryBanner": {
+    "color": "#CC342D",
+    "theme": "dark"
+  },
   "contributes": {
     "commands": [
       {

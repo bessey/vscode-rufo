@@ -38,10 +38,14 @@ function runRufoOnDocument(
 ): void {
   try {
     const documentText = document.getText();
-    const child = exec("rufo", (error, stdout, stderr) => {
-      if (error || stderr) console.log("ERROR", error, stderr);
-      const formattedText = stdout;
-      const edit = replaceDocumentWithFormatted(document, formattedText);
+    const child = exec("rufo", { timeout: 3000 }, (error, stdout, stderr) => {
+      let edit;
+      if (stderr || error) {
+        window.showErrorMessage(stderr || error.message);
+        edit = replaceDocumentWithFormatted(document, documentText);
+      } else {
+        edit = replaceDocumentWithFormatted(document, stdout);
+      }
       callback(edit);
     });
     child.stdin.write(documentText);

@@ -1,6 +1,6 @@
 # vscode-rufo
 
-VS Code extension for formatting ruby files using the [rufo](https://github.com/asterite/rufo) gem.
+VS Code extension for formatting ruby files using the [rufo](https://github.com/ruby-formatter/rufo) gem.
 
 ## Features
 
@@ -9,7 +9,7 @@ VS Code extension for formatting ruby files using the [rufo](https://github.com/
 
 ## Requirements
 
-Depends on the [rufo](https://github.com/asterite/rufo) gem being installed and available in your PATH.
+Depends on the [rufo](https://github.com/ruby-formatter/rufo) gem being installed and available in your PATH.
 
 ```bash
   $ gem install rufo
