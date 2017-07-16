@@ -2,6 +2,8 @@
 
 VS Code extension for formatting ruby files using the [rufo](https://github.com/ruby-formatter/rufo) gem.
 
+![Example of format on save](./formatting-example.gif)
+
 ## Features
 
 - Supports formatting on save
