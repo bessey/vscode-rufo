@@ -23,7 +23,7 @@ export function onWillSaveTextDocument(event: TextDocumentWillSaveEvent) {
   const { document } = event;
   if (!document.isDirty) return;
   if (document.languageId !== "ruby") return;
-  const formatOnSave = workspace.getConfiguration("rufo.formatOnSave");
+  const formatOnSave = workspace.getConfiguration("rufo").get("formatOnSave");
   if (!formatOnSave) return;
 
   const promise = new Promise(resolve =>

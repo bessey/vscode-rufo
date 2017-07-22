@@ -3,6 +3,9 @@ All notable changes to the "vscode-rufo" extension will be documented in this fi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.0.3
+- Fix formatOnSave option having no effect (was previously always on, sorry!)
+
 ## 0.0.2
 - Handle syntax errors Ruby better. (Do nothing instead of clearing the document!)
 
