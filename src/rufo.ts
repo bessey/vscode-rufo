@@ -1,4 +1,4 @@
-import { exec } from "child_process";
+import { exec, ExecOptions } from "child_process";
 import {
   Position,
   Range,
@@ -38,7 +38,11 @@ function runRufoOnDocument(
 ): void {
   try {
     const documentText = document.getText();
-    const child = exec("rufo", { timeout: 3000 }, (error, stdout, stderr) => {
+    const cwd = workspace.rootPath;
+    const options: ExecOptions = { timeout: 3000 };
+    if (cwd) options.cwd = cwd;
+    console.log(options);
+    const child = exec("rufo", options, (error, stdout, stderr) => {
       let edit;
       if (stderr || error) {
         window.showErrorMessage(stderr || error.message);
