@@ -41,14 +41,13 @@ function runRufoOnDocument(
     const cwd = workspace.rootPath;
     const options: ExecOptions = { timeout: 3000 };
     if (cwd) options.cwd = cwd;
-    console.log(options);
     const child = exec("rufo", options, (error, stdout, stderr) => {
       let edit;
-      if (stderr || error) {
+      if (!stderr && stdout && stdout.length > 0) {
+        edit = replaceDocumentWithFormatted(document, stdout);
+      } else {
         window.showErrorMessage(stderr || error.message);
         edit = replaceDocumentWithFormatted(document, documentText);
-      } else {
-        edit = replaceDocumentWithFormatted(document, stdout);
       }
       callback(edit);
     });

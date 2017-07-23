@@ -25,3 +25,7 @@ If you want to have `rufo` format your files every time you save, add this setti
 
 * `rufo.formatOnSave`: enable/disable formatting the entire Ruby document on save. (default: **false**)
 
+
+## Issues
+
+Doesn't seem to respect `.rufo` preferences, not sure why yet.

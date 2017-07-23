@@ -2,7 +2,7 @@
   "name": "vscode-rufo",
   "displayName": "rufo (Ruby formatter)",
   "description": "Ruby formatter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "mbessey",
   "engines": {
     "vscode": "^1.13.0"

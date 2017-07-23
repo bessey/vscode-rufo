@@ -3,6 +3,9 @@ All notable changes to the "vscode-rufo" extension will be documented in this fi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.0.5
+- .rufo file still ignored, but fixes regression 0.0.4 introduced.
+
 ## 0.0.4
 - Set working directory to the open project path, to ensure .rufo file settings are respected
 
