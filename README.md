@@ -23,8 +23,9 @@ If you want to format a file one off, you will find `Format ruby file` in your c
 
 If you want to have `rufo` format your files every time you save, add this setting your User / Workspace settings:
 
-* `rufo.formatOnSave`: enable/disable formatting the entire Ruby document on save. (default: **false**)
-
+```json
+"rufo.formatOnSave": true,  // enable/disable formatting the entire Ruby document on save. (default: **false**)
+```
 
 ## Issues
 
