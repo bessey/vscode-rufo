@@ -1,20 +1,14 @@
 "use strict";
-import { commands, ExtensionContext, workspace } from "vscode";
-import { onFormatRuby, onWillSaveTextDocument } from "./rufo";
+import { languages } from "vscode";
+import { RubyDocumentFormatter } from "./rufo";
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
-export function activate(context: ExtensionContext) {
-  const formatRuby = commands.registerCommand(
-    "extension.formatRuby",
-    onFormatRuby
+export function activate() {
+  languages.registerDocumentFormattingEditProvider(
+    { language: "ruby", scheme: "file" },
+    new RubyDocumentFormatter()
   );
-  const eventFormatRuby = workspace.onWillSaveTextDocument(
-    onWillSaveTextDocument
-  );
-
-  context.subscriptions.push(formatRuby);
-  context.subscriptions.push(eventFormatRuby);
 }
 
 // this method is called when your extension is deactivated

@@ -2,7 +2,7 @@
   "name": "vscode-rufo",
   "displayName": "rufo (Ruby formatter)",
   "description": "Ruby formatter",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "publisher": "mbessey",
   "engines": {
     "vscode": "^1.13.0"
@@ -24,21 +24,9 @@
     "theme": "dark"
   },
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.formatRuby",
-        "title": "Format ruby file"
-      }
-    ],
-    "configuration": {
-      "type": "object",
-      "title": "Rufo configuration",
-      "properties": {
-        "rufo.formatOnSave": {
-          "type": "boolean",
-          "default": false,
-          "description": "Wether to format on every save or not."
-        }
+    "configurationDefaults": {
+      "[ruby]": {
+        "editor.formatOnSave": true
       }
     }
   },

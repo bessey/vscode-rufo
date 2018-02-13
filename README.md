@@ -6,8 +6,7 @@ VS Code extension for formatting ruby files using the [rufo](https://github.com/
 
 ## Features
 
-- Supports formatting on save
-- Or with a command
+Supports formatting on save, or with a command
 
 ## Requirements
 
@@ -19,12 +18,17 @@ Depends on the [rufo](https://github.com/ruby-formatter/rufo) gem being installe
 
 ## Usage
 
-If you want to format a file one off, you will find `Format ruby file` in your command palette.
+Uses the standard VS Code Formatting Extension API.
 
-If you want to have `rufo` format your files every time you save, add this setting your User / Workspace settings:
+If you want to format a file one off, you will find `> Format Document` in your command palette.
 
-* `rufo.formatOnSave`: enable/disable formatting the entire Ruby document on save. (default: **false**)
+Out of the box, Rufo will format your documents on Save. To change this you may override `editor.formatOnSave` either, or more specifically just for the Ruby language:
 
+```js
+  "[ruby]": {
+    "editor.formatOnSave": true
+  }
+```
 
 ## Issues
 
