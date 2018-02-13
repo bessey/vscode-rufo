@@ -5,6 +5,7 @@ import {
   Range,
   TextDocument,
   TextEdit,
+  window,
   workspace
 } from "vscode";
 
@@ -32,16 +33,21 @@ function runRufo(document: TextDocument) {
           const textEdits: TextEdit[] = [new TextEdit(range, stdout)];
           resolve(textEdits);
         } else {
-          reject(stderr || error.message);
+          window.showErrorMessage(stderr || error.message);
+          reject();
         }
       });
       child.stdin.write(documentText);
       child.stdin.end();
     } catch (err) {
       if (err.message.includes("command not found")) {
-        reject("rufo not available in path. Ensure rufo gem is installed");
+        window.showErrorMessage(
+          "rufo not available in path. Ensure rufo gem is installed"
+        );
+        reject();
       } else {
-        reject(err.message);
+        window.showErrorMessage(err.message);
+        reject();
       }
     }
   });
