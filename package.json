@@ -1,63 +1,69 @@
 {
-	"name": "vscode-rufo",
-	"displayName": "rufo (Ruby formatter)",
-	"description": "Ruby formatter",
-	"version": "0.1.1",
-	"publisher": "mbessey",
-	"engines": {
-		"vscode": "^1.13.0"
-	},
-	"categories": [
-		"Formatters"
-	],
-	"keywords": [
-		"ruby",
-		"rufo",
-		"formatting"
-	],
-	"activationEvents": [
-		"onCommand:extension.formatRuby",
-		"onLanguage:ruby"
-	],
-	"main": "./out/src/extension",
-	"homepage": "https://github.com/bessey/vscode-rufo",
-	"bugs": {
-		"url": "https://github.com/bessey/vscode-rufo/issues"
-	},
-	"repository": {
-		"url": "https://github.com/bessey/vscode-rufo"
-	},
-	"license": "SEE LICENSE IN LICENSE.txt",
-	"galleryBanner": {
-		"color": "#CC342D",
-		"theme": "dark"
-	},
-	"contributes": {
-		"configurationDefaults": {
-			"[ruby]": {
-				"editor.formatOnSave": true
-			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "tsc -p ./",
-		"compile": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "node ./node_modules/vscode/bin/test"
-	},
-	"devDependencies": {
-		"@types/mocha": "^2.2.48",
-		"mocha": "^7.0.0",
-		"tslint": "^5.20.1",
-		"typescript": "^2.9.2",
-		"vscode": "^1.1.36"
-	},
-	"dependencies": {
-		"@types/node": "^8.10.59"
-	},
-	"__metadata": {
-		"id": "71552028-35dc-4e20-b904-8fe8543944a1",
-		"publisherDisplayName": "Matt Bessey",
-		"publisherId": "05e66fec-b8cb-4253-8ed1-1e8cebaa67ef"
-	}
+  "name": "vscode-rufo",
+  "displayName": "rufo (Ruby formatter)",
+  "description": "Ruby formatter",
+  "version": "0.1.1",
+  "publisher": "mbessey",
+  "engines": {
+    "vscode": "^1.13.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "keywords": [
+    "ruby",
+    "rufo",
+    "formatting"
+  ],
+  "activationEvents": [
+    "onCommand:extension.formatRuby",
+    "onLanguage:ruby"
+  ],
+  "main": "./out/src/extension",
+  "homepage": "https://github.com/bessey/vscode-rufo",
+  "bugs": {
+    "url": "https://github.com/bessey/vscode-rufo/issues"
+  },
+  "repository": {
+    "url": "https://github.com/bessey/vscode-rufo"
+  },
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "galleryBanner": {
+    "color": "#CC342D",
+    "theme": "dark"
+  },
+  "contributes": {
+    "configurationDefaults": {
+      "[ruby]": {
+        "editor.formatOnSave": true
+      },
+      "[gemfile]": {
+        "editor.formatOnSave": true
+      },
+      "[erb]": {
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.48",
+    "mocha": "^7.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^2.9.2",
+    "vscode": "^1.1.36"
+  },
+  "dependencies": {
+    "@types/node": "^8.10.59"
+  },
+  "__metadata": {
+    "id": "71552028-35dc-4e20-b904-8fe8543944a1",
+    "publisherDisplayName": "Matt Bessey",
+    "publisherId": "05e66fec-b8cb-4253-8ed1-1e8cebaa67ef"
+  }
 }
