@@ -17,7 +17,9 @@
   ],
   "activationEvents": [
     "onCommand:extension.formatRuby",
-    "onLanguage:ruby"
+    "onLanguage:ruby",
+    "onLanguage:gemfile",
+    "onLanguage:erb"
   ],
   "main": "./out/src/extension",
   "homepage": "https://github.com/bessey/vscode-rufo",
