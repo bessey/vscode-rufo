@@ -7,11 +7,9 @@ const languagesSupported = ["ruby", "erb", "gemfile"];
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate() {
-  languagesSupported.map(language =>
-    languages.registerDocumentFormattingEditProvider(
-      { language, scheme: "file" },
-      new RubyDocumentFormatter()
-    )
+  languages.registerDocumentFormattingEditProvider(
+    languagesSupported.map(language => ({ language, scheme: "file" })),
+    new RubyDocumentFormatter()
   );
 }
 
