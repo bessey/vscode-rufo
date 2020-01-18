@@ -24,19 +24,23 @@ function runRufo(document: TextDocument) {
       const cwd = workspace.rootPath;
       const options: ExecOptions = { timeout: 3000 };
       if (cwd) options.cwd = cwd;
-      const child = exec("rufo", options, (error, stdout, stderr) => {
-        if (!stderr && stdout && stdout.length > 0) {
-          const lastLine = document.lineCount - 1;
-          const endOfLastLine = document.lineAt(lastLine).range.end;
-          const range = new Range(new Position(0, 0), endOfLastLine);
+      const child = exec(
+        `rufo --filename ${document.fileName}`,
+        options,
+        (error, stdout, stderr) => {
+          if (!stderr && stdout && stdout.length > 0) {
+            const lastLine = document.lineCount - 1;
+            const endOfLastLine = document.lineAt(lastLine).range.end;
+            const range = new Range(new Position(0, 0), endOfLastLine);
 
-          const textEdits: TextEdit[] = [new TextEdit(range, stdout)];
-          resolve(textEdits);
-        } else {
-          window.showErrorMessage(stderr || error.message);
-          reject();
+            const textEdits: TextEdit[] = [new TextEdit(range, stdout)];
+            resolve(textEdits);
+          } else {
+            window.showErrorMessage(stderr || error.message);
+            reject();
+          }
         }
-      });
+      );
       child.stdin.write(documentText);
       child.stdin.end();
     } catch (err) {
