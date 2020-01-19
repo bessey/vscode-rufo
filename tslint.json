@@ -1,12 +1,15 @@
 {
-  "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
-  "jsRules": {},
-  "rules": {
-    "trailing-comma": [false],
-    "arrow-parens": false,
-    "curly": false,
-    "no-console": [false]
-  },
-  "rulesDirectory": []
+	"rules": {
+		"no-string-throw": true,
+		"no-unused-expression": true,
+		"no-duplicate-variable": true,
+		"curly": true,
+		"class-name": true,
+		"semicolon": [
+			true,
+			"always"
+		],
+		"triple-equals": true
+	},
+	"defaultSeverity": "warning"
 }
