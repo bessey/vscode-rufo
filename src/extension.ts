@@ -1,4 +1,4 @@
-import * as vscode from "vscode";
+import { languages } from "vscode";
 import { RubyDocumentFormatter } from "./rufo";
 
 const languagesSupported = ["ruby", "erb", "gemfile"];
@@ -6,7 +6,7 @@ const languagesSupported = ["ruby", "erb", "gemfile"];
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate() {
-  vscode.languages.registerDocumentFormattingEditProvider(
+  languages.registerDocumentFormattingEditProvider(
     languagesSupported.map(language => ({ language, scheme: "file" })),
     new RubyDocumentFormatter()
   );
