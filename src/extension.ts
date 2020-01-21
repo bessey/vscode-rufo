@@ -1,4 +1,3 @@
-"use strict";
 import { languages } from "vscode";
 import { RubyDocumentFormatter } from "./rufo";
 
@@ -14,6 +13,4 @@ export function activate() {
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {
-  // No-op
-}
+export function deactivate() {}
