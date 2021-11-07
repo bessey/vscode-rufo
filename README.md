@@ -1,5 +1,7 @@
 # vscode-rufo
 
+## Seeking new maintainer - I am happy to take contributions but I do not use this extension anymore
+
 VS Code extension for formatting ruby files using the [rufo](https://github.com/ruby-formatter/rufo) gem.
 
 ![Example of format on save](./formatting-example.gif)
