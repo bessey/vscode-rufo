@@ -25,7 +25,7 @@ function runRufo(document: TextDocument) {
       const options: ExecOptions = { timeout: 3000 };
       if (cwd) options.cwd = cwd;
       const child = exec(
-        `rufo --filename ${document.fileName}`,
+        `rufo --filename '${document.fileName}'`,
         options,
         (error, stdout, stderr) => {
           if (!stderr && stdout && stdout.length > 0) {
